@@ -12,7 +12,8 @@ export class ClienteEditComponent implements OnInit {
   cliente!: Cliente;
   nome: string = '';
   email: string = '';
-
+  telefone: string = ''
+  
   constructor(
     private clienteService: ClienteService,
     private route: ActivatedRoute,
@@ -25,6 +26,7 @@ export class ClienteEditComponent implements OnInit {
       console.log('clientes',clientes)
       this.cliente = clientes.find((c) => c.id == id)!;
       this.nome = this.cliente.nome;
+      this.telefone = this.cliente.telefone;
       this.email = this.cliente.email;
     });
   }
@@ -32,8 +34,8 @@ export class ClienteEditComponent implements OnInit {
   editarCliente(): void {
     console.log('editar Cliente')
     this.cliente.nome = this.nome;
+    this.cliente.telefone = this.telefone;
     this.cliente.email = this.email;
-
     this.clienteService.editarCliente(this.cliente).subscribe(() => {
       this.router.navigate(['/']);
     });

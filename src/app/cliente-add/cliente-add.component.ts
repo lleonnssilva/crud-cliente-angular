@@ -12,13 +12,14 @@ import { Cliente } from '../models/cliente';
 export class ClienteAddComponent {
   nome: string = '';
   email: string = '';
-
+  telefone: string = ''
   constructor(private clienteService: ClienteService, private router: Router) {}
 
   adicionarCliente(): void {
     const novoCliente: Cliente = {
       id: Date.now(), // Gerando um ID único simples
       nome: this.nome,
+      telefone : this.telefone,
       email: this.email
     };
 

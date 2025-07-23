@@ -10,16 +10,6 @@ import { Cliente } from '../models/cliente';
   styleUrls: ['./clientes-list.component.css']
 })
 export class ClientesListComponent implements OnInit {
-  // clientes: Cliente[] = [];
-
-  // constructor(private clienteService: ClienteService) {}
-
-  // ngOnInit(): void {
-  //   this.clienteService.listarClientes().subscribe((clientes) => {
-  //     this.clientes = clientes;
-  //   });
-  // }
-  
 
 clientes: Cliente[] = [];
 
