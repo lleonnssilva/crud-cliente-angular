@@ -1,0 +1,10 @@
+<h2>Editar Cliente</h2>
+<form (ngSubmit)="editarCliente()">
+  <label for="nome">Nome:</label>
+  <input id="nome" [(ngModel)]="nome" name="nome" required />
+
+  <label for="email">Email:</label>
+  <input id="email" [(ngModel)]="email" name="email" required />
+
+  <button type="submit">Salvar</button>
+</form>
